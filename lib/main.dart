@@ -32,7 +32,6 @@ class _PoetryPageState extends State<PoetryPage> {
   Map<String, dynamic>? poem;
   bool isLoading = false;
 
-  // Function to fetch a random poem from PoetryDB API
   Future<void> fetchRandomPoem() async {
     setState(() {
       isLoading = true;
@@ -59,7 +58,7 @@ class _PoetryPageState extends State<PoetryPage> {
   @override
   void initState() {
     super.initState();
-    fetchRandomPoem(); // Fetch a random poem on page load
+    fetchRandomPoem();
   }
 
   @override
@@ -70,7 +69,7 @@ class _PoetryPageState extends State<PoetryPage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
-            onPressed: fetchRandomPoem, // Fetch a new poem when tapped
+            onPressed: fetchRandomPoem,
           )
         ],
       ),
